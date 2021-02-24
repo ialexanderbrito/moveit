@@ -1,11 +1,12 @@
-import Head from 'next/head';
-
-import { ExperienceBar } from "../components/ExperienceBar";
+import ExperienceBar from '../components/ExperienceBar';
+import { Container } from '../styles/pages/index';
 
 export default function Home() {
   return (
-    <div className="container">
-      <ExperienceBar />
-    </div>
-  )
+    <>
+      <Container>
+        <ExperienceBar />
+      </Container>
+    </>
+  );
 }
