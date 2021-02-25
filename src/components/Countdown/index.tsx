@@ -51,16 +51,19 @@ const Countdown = () => {
       {hasFinished ? (
         <Button disabled active={isActive}>
           Ciclo encerrado
+          <img src="icons/check_circle.svg" alt="Completado" />
         </Button>
       ) : (
         <>
           {isActive ? (
             <Button type="button" active={isActive} onClick={resetCountdown}>
               Abandonar ciclo
+              <img src="icons/close.svg" alt="Abandonar" />
             </Button>
           ) : (
             <Button type="button" active={isActive} onClick={startCountdown}>
               Iniciar um ciclo
+              <img src="icons/play_arrow.svg" alt="Iniciar" />
             </Button>
           )}
         </>

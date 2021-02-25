@@ -63,6 +63,10 @@ export const Button = styled.button`
     font-size: 1.25rem;
     font-weight: 600;
 
+    img {
+      margin-left: 8px;
+    }
+
     :hover {
       background: ${({ theme }) => theme.colors.blueDark};
     }
