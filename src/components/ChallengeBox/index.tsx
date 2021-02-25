@@ -8,27 +8,23 @@ import {
 } from './styles';
 
 const ChallengeBox = () => {
-  const contextDate = useContext(ChallengesContext);
-
-  console.log(contextDate);
-
-  const hasActiveChallenge = true;
+  const { activeChallenge, resetChallenge } = useContext(ChallengesContext);
 
   return (
     <>
       <Container>
-        {hasActiveChallenge ? (
+        {activeChallenge ? (
           <ChallengeActive>
-            <header>Ganhe 400 xp</header>
+            <header>Ganhe {activeChallenge.amount}</header>
 
             <main>
-              <img src="icons/body.svg" />
+              <img src={`icons/${activeChallenge.type}.svg`} />
               <strong>Novo desafio</strong>
-              <p>Levante e faça uma caminhada de 3 minutos</p>
+              <p>{activeChallenge.description}</p>
             </main>
 
             <footer>
-              <Button type="button" result={'failed'}>
+              <Button type="button" result={'failed'} onClick={resetChallenge}>
                 Falhei
               </Button>
               <Button type="button" result={'succeeded'}>
