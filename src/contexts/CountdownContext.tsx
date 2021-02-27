@@ -41,7 +41,7 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
   function resetCountdown() {
     clearTimeout(countdownTimeout);
     setIsActive(false);
-    setTime(0.1 * 60);
+    setTime(15 * 60);
     setHasFinished(false);
   }
 
